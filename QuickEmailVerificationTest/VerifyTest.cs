@@ -43,7 +43,7 @@ namespace QuickEmailVerification.Tests
         }
 
 
-        [TestMethod]
+        //[TestMethod]
         public async Task Email_VerifyInfo_Is_Invalid()
         {
             var model = await _quickEmail.VerifyInfo("email@email.com");
@@ -54,7 +54,7 @@ namespace QuickEmailVerification.Tests
         }
 
 
-        [TestMethod]
+        //[TestMethod]
         public async Task Email_VerifyInfo_Is_Valid()
         {
             var model = await _quickEmail.VerifyInfo("ssemibiz@yahoo.co.kr");
@@ -64,14 +64,14 @@ namespace QuickEmailVerification.Tests
             Assert.AreEqual(model.Result, "valid");
         }
 
-        [TestMethod]
+        //[TestMethod]
         public async Task Email_Verify_Is_invalid()
         {
             bool flag = await _quickEmail.Verify("email@email.com");
             Assert.IsFalse(flag);
         }
 
-        [TestMethod]
+        //[TestMethod]
         public async Task Email_Verify_Is_Valid()
         {
             bool flag = await _quickEmail.Verify("ssemibiz@yahoo.co.kr");
@@ -79,7 +79,7 @@ namespace QuickEmailVerification.Tests
         }
 
 
-        [TestMethod]
+        //[TestMethod]
         public async Task Email_Verify_Is_Force_Valid()
         {
             bool flag = await _quickEmail.Verify("ssemibiz@yahoo.co.kr", true);
