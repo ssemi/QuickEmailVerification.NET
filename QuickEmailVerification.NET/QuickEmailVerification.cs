@@ -68,11 +68,11 @@ namespace QuickEmailVerification.NET
             if (Validator.IsEmail(email) && Validator.IsDomain(email))
             {
                 var uri = String.Format("{0}?email={1}&apikey={2}", ResourceUrl, email, _apiKey);
-                var response = await _client.GetAsync(uri);
-                var json = await response.Content.ReadAsStringAsync();
+                var response = await _client.GetAsync(uri, HttpCompletionOption.ResponseContentRead);
 
                 try
                 {
+                    var json = await response.Content.ReadAsStringAsync();
                     result = JsonConvert.DeserializeObject<ResultResponse>(json);
                 }
                 catch (Exception ex)
