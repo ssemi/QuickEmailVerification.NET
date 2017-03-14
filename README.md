@@ -7,7 +7,7 @@ Only the most basic verify was implemented.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/swe9wr7y5fn41q33?svg=true)](https://ci.appveyor.com/project/ssemi/quickemailverification-net)
 
-
+[![NuGet](https://img.shields.io/nuget/v/QuickEmailVerification.NET.svg)](https://www.nuget.org/packages/QuickEmailVerification.NET)
 
 ### Test
 
