@@ -51,6 +51,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ValidatorTest.cs" />
     <Compile Include="ApiTest.cs" />
     <Compile Include="VerifyTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

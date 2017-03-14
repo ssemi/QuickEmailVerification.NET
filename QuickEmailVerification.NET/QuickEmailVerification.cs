@@ -65,7 +65,7 @@ namespace QuickEmailVerification.NET
 
             var result = new ResultResponse();
 
-            if (Validator.IsEmail(email))
+            if (Validator.IsEmail(email) && Validator.IsDomain(email))
             {
                 var uri = String.Format("{0}?email={1}&apikey={2}", ResourceUrl, email, _apiKey);
                 var response = await _client.GetAsync(uri);
